@@ -19,7 +19,7 @@ html, body{
     --gradient-color: linear-gardient(90deg, #4458dc 0%, #854fee 100%);
     --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
     --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-    --opensans: 'Open_Sans', cursive;
-    --roboto: 'Roboto', cursive;
+    --opensans: 'OpenSans', normal;
+    --roboto: 'Roboto', sans-serif;
 
 }
