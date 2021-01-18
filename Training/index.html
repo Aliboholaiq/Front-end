@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Script.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 id="old">JQuery</h3>
+    <p id="p1">This is p1</p>
+    <p id="p2">This is p2 (Clickable)</p>
+    <p id="demo">This is p3</p>
+    <ul>
+        <li class="sizes">Item One</li>
+        <li class="">Item two</li>
+    </ul>
+    <div>
+        <input type="checkbox" id="cb"/>
+        <label for="cb">Show button</label>
+    </div>
+
+    <!-- Buttons -->
+    <button id="bbb">Button</button>
+    <button onclick="byTagNames()">Change P3</button>
+    <!--<button onclick="changeP2()">Change P2!</button>-->
+    <button id="button1">Change P2</button>
+    <button onclick="changeStyle('p2')">Change Style</button>
+
+    <!-- Event Listener -->
+    <script>
+        document.getElementById("button1").addEventListener("click", changeP2);
+        document.getElementById("p2").addEventListener("click", function(){
+            alert("Ouch");
+        });
+    </script>
+</body>
+</html>
