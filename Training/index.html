@@ -2,33 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="Script.js"></script>
     <link rel="stylesheet" type="text/css" href="Style.css">
     <title>Document</title>
 </head>
 <body>
-
-    <h3 id="old">JQuery</h3>
-    <p id="p1">This is p1</p>
-    <p id="p2">This is p2 (Clickable)</p>
-    <p id="demo">This is p3</p>
-    <ul>
-        <li class="sizes">Item One</li>
-        <li class="">Item two</li>
-    </ul>
-    <div>
-        <input type="checkbox" id="cb"/>
-        <label for="cb">Show button</label>
+    <div class="container">
+        <div class="jumbotron">
+            <h3 id="old">bootstrap</h3>
+            <p id="p1">This is p1</p>
+            <p id="p2">This is p2 (Clickable)</p>
+            <p id="demo">This is p3</p>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">A</a>
+                <a href="#" class="list-group-item">B</a>
+                <a href="#" class="list-group-item disabled">C</a>
+            </div>
+                <li class="sizes">Item One</li>
+                <li class="">Item two</li>
+            </ul>
+            <div>
+                <input type="checkbox" id="cb"/>
+                <label for="cb">Show button</label>
+            </div>
+            <!-- Buttons -->
+            <button id="bbb">Button</button>
+            <button onclick="byTagNames()">Change P3</button>
+            <!--<button onclick="changeP2()">Change P2!</button>-->
+            <button id="button1">Change P2</button>
+            <button onclick="changeStyle('p2')">Change Style</button>
+        </div>
     </div>
-
-    <!-- Buttons -->
-    <button id="bbb">Button</button>
-    <button onclick="byTagNames()">Change P3</button>
-    <!--<button onclick="changeP2()">Change P2!</button>-->
-    <button id="button1">Change P2</button>
-    <button onclick="changeStyle('p2')">Change Style</button>
-
     <!-- Event Listener -->
     <script>
         document.getElementById("button1").addEventListener("click", changeP2);
