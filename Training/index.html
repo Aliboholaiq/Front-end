@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="Script.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="Style.css">
     <title>Document</title>
 </head>
@@ -34,8 +35,40 @@
             <!--<button onclick="changeP2()">Change P2!</button>-->
             <button id="button1">Change P2</button>
             <button onclick="changeStyle('p2')">Change Style</button>
+            <main id="app"> 
+                <h2>Records</h2>
+                <div id="records">
+                    <div v-for="emp in all weights">
+                        {{emp.empName}} weighs {{emp.empWeight}}
+                    </div>
+                </div>
+                
+                <form name="frmCollectweights">
+                    <div>
+                        <label for="empName">Name:</label>
+                        <input type="text" id="empName" name="empName" v-model="empName">
+                    </div>
+                    <div class="formSeparator">
+                        <label for="empWeight">Weight:</label>
+                        <input type="text" id="empWeight" name="empWeight" v-model.number="empWeight">  
+                    </div>
+                    <div>
+                        <button id="sendData" type="submit" :disabled="isDisabled">Save Weight</button>
+                    </div>
+                </form>
+                <span class="standOut">{{empName}} weighs {{empWeight}}</span>
+            </main>
         </div>
     </div>
+
+    
+    <section id="app">
+        <a href="#" class="list-group-item">{{ recipes[0] }}</a>
+        <a href="#" class="list-group-item">{{ recipes[1] }}</a>
+        <a href="#" class="list-group-item">{{ recipes[2] }}</a>
+        <a href="#" class="list-group-item">{{ recipes[3] }}</a>
+    </section>
+    <script src="Script.js"></script>
     <!-- Event Listener -->
     <script>
         document.getElementById("button1").addEventListener("click", changeP2);
