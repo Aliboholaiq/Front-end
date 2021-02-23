@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>React App</title>
+
+    <style>
+        #para-id{
+            color: green;
+        }
+
+        h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-react-app">
+
+    </div>
+
+    <script> 
+    var el= React.createElement("div",{id:"inner-div-id", key:"unique-react-key1"},
+    React.createElement("h2",{id:"header-id"}, "Welcome to React!"));
+    var el1= React.createElement("p",{id:"para-id", key:"unique-react-key2"}, "react 2");
+
+    var ellist=[el,el1];
+    var outerel= React.createElement("div",{id:"outer-div-id"}, ellist);
+
+
+
+
+    ReactDOM.render(outerel, document.getElementById('my-react-app'));
+    </script>
+</body>
+</html>

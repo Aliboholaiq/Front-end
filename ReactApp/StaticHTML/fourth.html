@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>React App</title>
+
+    <style>
+        #para-id{
+            color: green;
+        }
+
+        h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-react-app">
+
+    </div>
+
+    <script> 
+    var el= React.createElement("div",{key:"el-key"}, "My fav fruits:");
+
+    var el1= React.createElement("li",{key:"0-key"}, "Orange");
+    var el2= React.createElement("li",{key:"0-key"}, "Strawberry");
+    var el3= React.createElement("li",{key:"0-key"}, "Bannana");
+    var el4= React.createElement("li",{key:"0-key"}, "Apple");
+    var ellist= [el, el1, el2, el3, el4];
+    var list= React.createElement("ol",{className:"my-fruits"}, ellist);
+    ReactDOM.render(list, document.getElementById('my-react-app'));
+    </script>
+</body>
+</html>
